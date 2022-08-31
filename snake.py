@@ -12,7 +12,6 @@ RIGHT = 0
 class Snake:
     def __init__(self) -> None:
         self.segments = []
-        # create a method to create snake and it's attributes instead of writing the whole attributes in here
         self.create_snake()
         self.head = self.segments[0]
 
@@ -39,7 +38,7 @@ class Snake:
     
     def extend(self):
         # add a segment to the snake.
-        self.add_segment(self.segments[-1].position())  # position() returns the turtle's current location
+        self.add_segment(self.segments[-1].position())  
 
     def move(self):
         """a method created to move all segments of the snake"""
@@ -51,7 +50,6 @@ class Snake:
 
     def up(self):
         if self.head.heading() != DOWN:
-            # it can only move up when it's moving at other directions but not when it's going down
             self.head.setheading(UP)
 
     def down(self):

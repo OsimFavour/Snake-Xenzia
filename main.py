@@ -27,8 +27,7 @@ while game_is_on:
     snake.move()
 
     # Detect collision with food.
-    if snake.head.distance(food) < 15:  # distance works with comparing the turtle with the other turtle put into the parenthesis
-        # print("nom nom nom")
+    if snake.head.distance(food) < 15:
         food.refresh()
         snake.extend()
         scoreboard.increase_score()
@@ -39,7 +38,7 @@ while game_is_on:
         snake.reset()
 
     # Detect collision with tail.
-    for segment in snake.segments[1:]:  # giving every thing from the segment list other than the first item
+    for segment in snake.segments[1:]: 
         if snake.head.distance(segment) < 10:
             scoreboard.reset()
             snake.reset()
